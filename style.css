@@ -1,0 +1,550 @@
+/* ============================================
+   THE A.I. DISPATCH — Design System
+   Newspaper broadsheet aesthetic
+   ============================================ */
+
+/* --- Design Tokens --- */
+:root {
+  /* Typography — vintage broadsheet */
+  --font-display: 'Old Standard TT', 'Times New Roman', serif;
+  --font-body: 'Lora', Georgia, serif;
+  --font-ui: 'IBM Plex Sans', Helvetica, Arial, sans-serif;
+
+  /* Palette — aged newsprint */
+  --ink: #2b2420;
+  --ink-light: #5c4f44;
+  --ink-muted: #8a7d72;
+  --paper: #f0e6d3;
+  --paper-dark: #e6d9c3;
+  --paper-darker: #d9ccb7;
+  --rule: #2b2420;
+  --rule-light: #b8a992;
+  --accent-compute: #2a5ea8;
+  --accent-efficiency: #b87020;
+  --accent-red: #a63324;
+  --accent-green: #2a724e;
+
+  /* Domain colours (Ch3 beeswarm) */
+  --domain-vision: #1d9e75;
+  --domain-language: #2663c4;
+  --domain-games: #d85a30;
+  --domain-multimodal: #ba7517;
+
+  /* Layout */
+  --masthead-height: 72px;
+  --max-width: 1300px;
+  --gutter: 28px;
+}
+
+/* --- Reset & Base --- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  font-size: 17px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--paper);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--accent-compute); }
+
+/* ============================================
+   MASTHEAD — pinned newspaper header
+   ============================================ */
+#masthead {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: var(--paper);
+  height: var(--masthead-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.masthead-inner {
+  width: 100%;
+  max-width: 100%;
+  padding: 0 3rem;
+  text-align: center;
+}
+
+.masthead-rule-top {
+  height: 3px;
+  background: var(--ink);
+  margin-bottom: 6px;
+}
+
+.masthead-title {
+  font-family: var(--font-display);
+  font-size: 1.85rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.masthead-subtitle {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-ui);
+  font-size: 0.6rem;
+  color: var(--ink-muted);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+
+.masthead-progress {
+  color: var(--ink-light);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.masthead-rule-bottom {
+  height: 1px;
+  background: var(--rule-light);
+  margin-top: 6px;
+}
+
+/* ============================================
+   OPENING HOOK — full-bleed intro
+   ============================================ */
+#hook {
+  margin-top: var(--masthead-height);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1e1812;
+  color: var(--paper);
+  text-align: center;
+  position: relative;
+}
+
+.hook-kicker {
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--rule-light);
+  margin-bottom: 1rem;
+}
+
+.hook-headline {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 700;
+  line-height: 1.2;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.hook-headline em {
+  font-style: italic;
+}
+
+.hook-cursor {
+  font-family: var(--font-ui);
+  font-size: 2rem;
+  margin-top: 0.5rem;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.hook-counter {
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+  color: var(--ink-muted);
+  margin-top: 1.5rem;
+}
+
+.energy-counter-value {
+  display: inline-block;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--accent-efficiency);
+  font-variant-numeric: tabular-nums;
+  min-width: 10ch;  /* prevents layout shift as digits change */
+}
+
+.hook-scroll-cue {
+  position: absolute;
+  bottom: 2rem;
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  color: var(--ink-muted);
+  animation: nudge 2s ease-in-out infinite;
+}
+
+.hook-how-to {
+  position: absolute;
+  bottom: 4.5rem;
+  font-family: var(--font-ui);
+  font-size: 0.65rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  opacity: 0.6;
+}
+
+@keyframes nudge {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(6px); }
+}
+
+/* ============================================
+   CHAPTER HEADERS
+   ============================================ */
+.chapter {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+.chapter-header {
+  text-align: center;
+  padding: 4rem 0 2rem;
+  border-top: 3px double var(--rule);
+}
+
+.chapter-kicker {
+  font-family: var(--font-ui);
+  font-size: 0.7rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
+.chapter-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  margin: 0.25rem 0 0.5rem;
+}
+
+.chapter-dek {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--ink-light);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* ============================================
+   SCROLLY — sticky graphic + scrolling text
+   ============================================ */
+.scrolly {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: var(--gutter);
+  margin-bottom: 2rem;
+}
+
+/* Default: text left, graphic right */
+.scrolly-text {
+  grid-column: 1;
+}
+
+.scrolly-graphic {
+  grid-column: 2;
+  position: sticky;
+  top: calc(var(--masthead-height) + 1rem);
+  height: fit-content;
+  align-self: start;
+}
+
+/* Flipped variant (Ch2): graphic left, text right */
+.scrolly-flipped .scrolly-graphic {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.scrolly-flipped .scrolly-text {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+/* Step blocks — tall enough to trigger on scroll */
+.step {
+  padding: 1.5rem 0;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  opacity: 0.3;
+  transition: opacity 0.4s ease;
+}
+
+.step.is-active {
+  opacity: 1;
+}
+
+.step:last-child {
+  min-height: 40vh;
+}
+
+.step p {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  max-width: 480px;
+  text-align: justify;
+  hyphens: auto;
+}
+
+.drop-cap {
+  float: left;
+  font-family: var(--font-display);
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 0.8;
+  padding: 4px 8px 0 0;
+  color: var(--ink);
+}
+
+.step p::after {
+  content: "";
+  display: table;
+  clear: left;
+}
+
+/* Graphic containers */
+.graphic-container {
+  width: 100%;
+  background: var(--paper);
+  border: 1px solid var(--rule-light);
+  border-radius: 2px;
+  padding: 1rem;
+  min-height: 380px;
+}
+
+.graphic-container svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+
+/* ============================================
+   WHAT-IF BOX (Ch2)
+   ============================================ */
+.what-if-box {
+  margin-top: 1rem;
+  border: 1.5px solid var(--ink);
+  background: var(--paper);
+  /* Smooth transition for the scroll-triggered border pulse */
+  transition: border-color 0.3s ease;
+}
+
+.what-if-header {
+  font-family: var(--font-ui);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid var(--rule-light);
+  background: var(--paper-dark);
+}
+
+.what-if-body {
+  padding: 0.75rem;
+}
+
+.what-if-body label {
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  font-weight: 500;
+  display: block;
+  margin: 0.5rem 0 0.25rem;
+  color: var(--ink-light);
+}
+
+.what-if-body label:first-child {
+  margin-top: 0;
+}
+
+.what-if-body select {
+  width: 100%;
+  padding: 0.4rem 0.5rem;
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  border: 1px solid var(--rule-light);
+  border-radius: 2px;
+  background: var(--paper);
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.what-if-result {
+  margin-top: 0.75rem;
+  padding: 0.75rem;
+  background: var(--paper-dark);
+  border: 1px solid var(--rule-light);
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  line-height: 1.6;
+  min-height: 2rem;
+}
+
+/* ============================================
+   INSET BOX — "By The Numbers" (Ch3)
+   ============================================ */
+.inset-box {
+  margin-top: 1rem;
+  border: 1.5px solid var(--ink);
+  background: var(--paper);
+  transition: opacity 0.5s ease;
+}
+
+.inset-header {
+  font-family: var(--font-ui);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid var(--rule-light);
+  background: var(--paper-dark);
+}
+
+.inset-body {
+  padding: 0.75rem;
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+/* ============================================
+   COLOPHON — footer
+   ============================================ */
+#colophon {
+  border-top: 3px double var(--rule);
+  background: var(--paper-dark);
+  padding: 2rem var(--gutter);
+  margin-top: 3rem;
+}
+
+.colophon-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.colophon-section h3 {
+  font-family: var(--font-ui);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  color: var(--ink-muted);
+}
+
+.colophon-section p {
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  color: var(--ink-light);
+  line-height: 1.6;
+}
+
+.colophon-credit {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-family: var(--font-ui);
+  font-size: 0.7rem;
+  color: var(--ink-muted);
+  margin-top: 1rem;
+}
+
+/* ============================================
+   TOOLTIP (shared across chapters)
+   ============================================ */
+.tooltip {
+  position: absolute;
+  pointer-events: none;
+  background: var(--paper);
+  border: 1.5px solid var(--ink);
+  padding: 0.6rem 0.75rem;
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  line-height: 1.5;
+  box-shadow: 2px 2px 0 rgba(0,0,0,0.08);
+  z-index: 500;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+  max-width: 240px;
+}
+
+.tooltip.visible { opacity: 1; }
+
+.tooltip .tt-model {
+  font-weight: 600;
+  font-size: 0.8rem;
+  margin-bottom: 0.2rem;
+}
+
+.tooltip .tt-org {
+  color: var(--ink-muted);
+  font-size: 0.7rem;
+}
+
+/* ============================================
+   D3 CHART SHARED STYLES
+   ============================================ */
+.axis text {
+  font-family: var(--font-ui);
+  font-size: 11px;
+  fill: var(--ink-light);
+}
+
+.axis path,
+.axis line {
+  stroke: var(--rule-light);
+}
+
+.axis-label {
+  font-family: var(--font-ui);
+  font-size: 11px;
+  fill: var(--ink-muted);
+}
+
+.chart-title {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 700;
+  fill: var(--ink);
+}
+
+/* ============================================
+   UTILITY
+   ============================================ */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}

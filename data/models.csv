@@ -1,0 +1,139 @@
+Model,Organization,Publication Year,Domain,Parameters,Training compute (FLOP),Avg_FLOP_per_Joule,Primary_Country,Country_Code,Grid Carbon Intensity,Estimated_Energy_MWh,Estimated_Carbon_Footprint_tCO2
+Grok 4,xAI,2025,"Language,Multimodal,Vision",3000000000000.0,5.0000000000001e+26,6704727195423.624,United States of America,,383.78,20715.069359375517,7950.029318741135
+Llama 4 Behemoth (preview),Meta AI,2025,"Multimodal,Language,Vision",2000000000000.0,5.18400000000001e+25,6704727195423.624,United States of America,,383.78,2147.738391180015,824.2590397670662
+GPT-4o (Mar 2025),OpenAI,2025,"Multimodal,Language,Audio,Speech,Vision",,,6704727195423.624,United States of America,,383.78,,
+Llama Nemotron Ultra 253B,NVIDIA,2025,Language,253000000000.0,3.911001e+25,6704727195423.624,United States of America,,383.78,1620.333139591708,621.8514523125057
+GPT-4.5,OpenAI,2025,"Language,Vision,Multimodal",,3.8e+26,6704727195423.624,United States of America,,383.78,15743.45271312508,6042.022282243143
+Grok 3,xAI,2025,"Language,Vision,Multimodal",3000000000000.0,3.5000000000000006e+26,6704727195423.624,United States of America,,383.78,14500.548551562577,5565.020523118686
+GPT-4o (Jan 2025),OpenAI,2025,"Multimodal,Language,Audio,Speech,Vision",,,6704727195423.624,United States of America,,383.78,,
+GPT-4o (Nov 2024),OpenAI,2024,"Multimodal,Language,Audio,Speech,Vision",,,3292918793195.109,United States of America,USA,383.78,,
+GLM-4-Plus,Z.ai (Zhipu AI),2024,Language,,,3292918793195.109,China,CHN,555.4,,
+Grok-2,xAI,2024,"Language,Vision,Multimodal",,2.9599999999999996e+25,3292918793195.109,United States of America,USA,383.78,2496.94047700588,958.2758162653166
+GPT-4o (Aug 2024),OpenAI,2024,"Multimodal,Language,Audio,Speech,Vision",,,3292918793195.109,United States of America,USA,383.78,,
+Llama 3.1-405B,Meta AI,2024,Language,405000000000.0,3.8e+25,3292918793195.109,United States of America,USA,383.78,3205.531693453495,1230.2189533135822
+Claude 3.5 Sonnet,Anthropic,2024,"Multimodal,Language,Vision",,2.700000000000001e+25,3292918793195.109,United States of America,USA,383.78,2277.614624295905,874.1029405122823
+Nemotron-4 340B,NVIDIA,2024,Language,340000000000.0,1.8e+25,3292918793195.109,United States of America,USA,383.78,1518.4097495306028,582.7352936748548
+GPT-4o,OpenAI,2024,"Multimodal,Language,Audio,Speech,Vision",,,3292918793195.109,United States of America,USA,383.78,,
+GPT-4 Turbo (Apr 2024),OpenAI,2024,"Multimodal,Vision,Language,Image generation",,,3292918793195.109,United States of America,USA,383.78,,
+Claude 3 Opus,Anthropic,2024,"Multimodal,Language,Vision",,,3292918793195.109,United States of America,USA,383.78,,
+Gemini 1.5 Pro,Google DeepMind,2024,"Language,Multimodal",,,3292918793195.109,United States of America,USA,383.78,,
+GLM-4 (0116),Z.ai (Zhipu AI),2024,Language,,,3292918793195.109,China,CHN,555.4,,
+Gemini 1.0 Ultra,Google DeepMind,2023,"Multimodal,Language,Vision",,5.0000000001e+25,1811414237934.1624,United States of America,USA,392.89,7667.428354215835,3012.455926087859
+Inflection-2,Inflection AI,2023,Language,,1.001e+25,1811414237934.1624,United States of America,USA,392.89,1535.0191564833096,603.0936763907275
+GPT-4 Turbo (Nov 2023),OpenAI,2023,"Multimodal,Vision,Language,Image generation",,,1811414237934.1624,United States of America,USA,392.89,,
+Amazon Titan,Amazon,2023,"Language,Image generation",200000000000.0,4.8e+24,1811414237934.1624,United States of America,USA,392.89,736.0731219899986,289.1957688986506
+Falcon-180B,Technology Innovation Institute,2023,Language,180000000000.0,3.76e+24,1811414237934.1624,United Arab Emirates,ARE,483.79,576.590612225499,278.94877228857416
+Claude 2,Anthropic,2023,Language,,3.866e+24,1811414237934.1624,United States of America,USA,392.89,592.8455603361115,232.9230922004548
+PaLM 2,Google,2023,Language,340000000000.0,7.34e+24,1811414237934.1624,United States of America,USA,392.89,1125.578482376373,442.2285299408532
+SenseChat,SenseTime,2023,Language,180000000000.0,3.89e+24,1811414237934.1624,Hong Kong,HKG,674.44,596.5259259460614,402.3209454950616
+GPT-4 (Mar 2023),OpenAI,2023,"Multimodal,Language,Vision",1800000000000.0,2.1e+25,1811414237934.1624,United States of America,USA,392.89,3220.319908706244,1265.2314889315962
+GPT-4 (Jun 2023),OpenAI,2023,"Multimodal,Language,Vision",1800000000000.0,2.1e+25,1811414237934.1624,United States of America,USA,392.89,3220.319908706244,1265.2314889315962
+U-PaLM (540B),Google,2022,Language,540000000000.0,2.53e+24,1597552651329.6345,United States of America,USA,410.39,439.9089927914798,180.5342515516954
+Flan-PaLM 540B,Google,2022,Language,540000000000.0,2.540000000001e+24,1597552651329.6345,United States of America,USA,410.39,441.6477635141498,181.24782566857195
+Minerva (540B),Google,2022,Language,540350000000.0,2.7415e+24,1597552651329.6345,United States of America,USA,410.39,476.6839935722696,195.62634412212373
+PaLM (540B),Google Research,2022,Language,540350000000.0,2.5272e+24,1597552651329.6345,United States of America,USA,410.39,439.422136989181,180.33445079899
+"GPT-3.5 (davinci-002)
+",OpenAI,2022,Language,,2.578e+24,1597552651329.6345,United States of America,USA,410.39,448.2550922594605,183.95940731236
+ERNIE 3.0 Titan,"Baidu,Peng Cheng Laboratory",2021,Language,260000000000.0,1.0421e+24,1217623224942.151,China,CHN,599.05,237.7354638878336,142.41542964200673
+EXAONE 1.0,LG,2021,"Multimodal,Language,Vision",300000000000.0,1.6956e+24,1217623224942.151,South Korea,KOR,459.46,386.8191656925541,177.72793386910092
+Gopher (280B),DeepMind,2021,Language,280000000000.0,6.31e+23,1217623224942.151,United Kingdom,GBR,267.1,143.95075109223973,38.44924561673723
+Yuan 1.0,Inspur,2021,Language,245730000000.0,3.5380000000001e+23,1217623224942.151,China,CHN,599.05,80.71279831447836,48.35100183028826
+Megatron-Turing NLG 530B,"Microsoft,NVIDIA",2021,Language,530000000000.0,8.586e+23,1217623224942.151,United States of America,USA,423.78,195.87339918826788,83.00722910800417
+HyperCLOVA 204B,NAVER,2021,Language,204000000000.0,2.0000000001e+23,1217623224942.151,South Korea,KOR,459.46,45.62622855766633,20.96342697310537
+FLAN 137B,Google Research,2021,Language,137000000000.0,2.047e+24,1217623224942.151,United States of America,USA,423.78,466.9844492643657,197.8986699092529
+Jurassic-1-Jumbo,AI21 Labs,2021,Language,178000000000.0,3.7e+23,1217623224942.151,Israel,,,84.40852282746228,
+Wu Dao 2.0,Beijing Academy of Artificial Intelligence / BAAI,2021,"Multimodal,Language,Vision,Image generation",1750000000000.0,1.54350000000001e+24,1217623224942.151,China,CHN,599.05,352.1204188761862,210.93773692777935
+Switch,Google,2021,Language,1571000000000.0,8.22e+22,1217623224942.151,United States of America,USA,423.78,18.75237993626324,7.946883569389636
+mT5-XXL,"Google,Google Research",2020,Language,13000000000.0,8.2e+22,1128636458333.3335,United States of America,USA,411.73,20.18167817422264,8.309402354672686
+GShard (dense),Google,2020,Language,2300000000.0,4.765e+22,1128636458333.3335,United States of America,USA,411.73,11.727523963435472,4.828573441465286
+iGPT-XL,OpenAI,2020,"Vision,Image generation",6801000000.0,3.3e+22,1128636458333.3335,United States of America,USA,411.73,8.121894874992037,3.3440277768804716
+GPT-3 175B (davinci),OpenAI,2020,Language,174600000000.0,3.14e+23,1128636458333.3335,United States of America,USA,411.73,77.2810603256818,31.81893096789297
+Meena,Google Brain,2020,Language,2600000000.0,1.12e+23,1128636458333.3335,United States of America,USA,411.73,27.56521896966995,11.349427606382209
+OpenAI Five,OpenAI,2019,Games,159000000.0,6.7e+22,1680171345458.863,United States of America,USA,439.45,11.076912578834824,4.867749232768963
+Noisy Student (L2),"Carnegie Mellon University (CMU),Google",2019,Vision,480000000.0,2.612e+22,1680171345458.863,United States of America,USA,439.45,4.318342635211427,1.8976956710436617
+XLM-RoBERTa,Facebook AI,2019,Language,550000000.0,2.076e+22,1680171345458.863,United States of America,USA,439.45,3.4321896289046414,1.5082757324221443
+AlphaStar,DeepMind,2019,Games,139000000.0,1.0773400001e+23,1680171345458.863,United Kingdom,GBR,268.41,17.811344774312836,4.780743050873308
+T5-3B,Google,2019,Language,2800000000.0,9.0000000001e+21,1680171345458.863,United States of America,USA,439.45,1.487943480755539,0.6538767626180215
+T5-11B,Google,2019,Language,11000000000.0,3.3e+22,1680171345458.863,United States of America,USA,439.45,5.45579276270969,2.3975481295727734
+Megatron-BERT,NVIDIA,2019,Language,3900000000.0,2.2e+22,1680171345458.863,United States of America,USA,439.45,3.637195175139793,1.5983654197151822
+Megatron-LM (8.3B),NVIDIA,2019,Language,8300000000.0,9.1e+21,1680171345458.863,United States of America,USA,439.45,1.504476186080551,0.661142059973098
+RoBERTa Large,"Facebook,University of Washington",2019,Language,355000000.0,8.5067e+21,1680171345458.863,United States of America,USA,439.45,1.4063876452891673,0.6180370507223245
+XLNet,"Carnegie Mellon University (CMU),Google Brain",2019,Language,340000000.0,6.19e+21,1680171345458.863,United States of America,USA,439.45,1.0233744606416055,0.4497219067289535
+Grover-Mega,University of Washington,2019,Language,1500000000.0,4.6386183e+21,1680171345458.863,United States of America,USA,439.45,0.7668890954579612,0.337009412999001
+GPT-2 (774M),OpenAI,2019,Language,774000000.0,4.9536e+21,1680171345458.863,United States of America,USA,439.45,0.8189640917987491,0.3598937701409603
+GPT-2 (355M),OpenAI,2019,Language,355000000.0,2.272000000071e+21,1680171345458.863,United States of America,USA,439.45,0.3756230653716296,0.1650675560775626
+BigGAN-deep 512x512,"Heriot-Watt University,DeepMind",2018,Image generation,112694781.0,1.8e+21,525598064365.9573,United Kingdom,GBR,285.65,0.9512972628678972,0.2717380631382148
+ResNeXt-101 32x48d,Facebook,2018,Vision,829000000.0,8.74395e+21,525598064365.9573,United States of America,USA,462.61,4.6211642786965275,2.1377968069678004
+AlphaGo Zero,DeepMind,2017,Games,46400244.0,6.49439910290227e+20,188789259259.25928,United Kingdom,GBR,302.2,0.9555627040883724,0.2887710491755061
+OpenAI TI7 DOTA 1v1,OpenAI,2017,Games,,6.046095222592002e+20,188789259259.25928,United States of America,USA,469.02,0.8896008712328661,0.4172406006256388
+JFT,"Google Research,Carnegie Mellon University (CMU)",2017,Vision,44654504.0,8.43e+20,188789259259.25928,United States of America,USA,469.02,1.2403601115097962,0.5817536995003245
+NASv3 (CIFAR-10),Google Brain,2016,Vision,37400000.0,2.2e+21,84958989898.9899,United States of America,USA,483.35,7.193012909377549,3.476742789747638
+Xception,Google,2016,Vision,22855952.0,4.36e+20,84958989898.9899,United States of America,USA,483.35,1.4255243765857324,0.6890272074227137
+GNMT,Google,2016,Language,278000000.0,6.620000000001e+21,84958989898.9899,United States of America,USA,483.35,21.6444297545848,10.461835121878565
+BIG LSTM+CNN INPUTS ,Google Brain,2016,Language,1040000000.0,1.0220883e+20,84958989898.9899,United States of America,USA,483.35,0.3341770152919888,0.1615244603413827
+AlphaGo Lee,DeepMind,2016,Games,,1.9e+21,84958989898.9899,United Kingdom,GBR,333.45,6.212147512644246,2.0714405880912237
+DeepSpeech2 (English),Baidu Research - Silicon Valley AI Lab,2015,Speech,38000000.0,2.6e+19,226657462962.96295,United States of America,USA,504.9,0.0318640389238027,0.0160881532526279
+Inception v3,"Google,University College London (UCL)",2015,Vision,23626728.0,1e+20,226657462962.96295,United States of America,USA,504.9,0.1225539958607796,0.0618775125101076
+SAF R-CNN,"Beijing Institute of Technology,Sun Yat-sen University,Panasonic R&D,National University of Singapore",2015,Vision,138000000.0,1.231108125e+19,226657462962.96295,China,CHN,667.85,0.0150877220055422,0.0100763351414013
+AlphaGo Fan,DeepMind,2015,Games,8209984.0,3.8e+20,226657462962.96295,United Kingdom,GBR,397.79,0.4657051842709626,0.1852528652511462
+"MSRA (C, PReLU)",Microsoft Research,2015,Vision,87048800.0,2.397403008e+19,226657462962.96295,United States of America,USA,504.9,0.0293811318319052,0.0148345334619289
+SNM-skip,Google,2014,Language,62000000000.0,2.97600000001e+20,26618181818.18182,United States of America,,383.78,3.10564663024723,1.191885063756282
+Seq2Seq LSTM,Google,2014,Language,1920000000.0,5.6e+19,26618181818.18182,United States of America,,383.78,0.5843958712811171,0.2242794474802671
+VGG16,University of Oxford,2014,Vision,138000000.0,1.2291e+19,26618181818.18182,United Kingdom,,267.1,0.1282644581056466,0.0342594367600182
+VGG19,University of Oxford,2014,Vision,144000000.0,1.1e+19,26618181818.18182,United Kingdom,,267.1,0.1147920461445051,0.0306609555251973
+RNNsearch-50*,"Jacobs University Bremen,University of Montreal / Université de Montréal",2014,Language,,1.5552e+18,26618181818.18182,Germany,,,0.0162295081967213,
+SPPNet,"Microsoft,Xi’an Jiaotong University,University of Science and Technology of China (USTC)",2014,Vision,,3.411072e+18,26618181818.18182,United States of America,,383.78,0.0355967213114754,0.013661309704918
+TransE,"Universite de Technologie de Compiègne – CNRS,Google",2013,Language,942000000.0,1.340928e+18,19215861678.004536,France,,,0.0193839863255447,
+Visualizing CNNs,New York University (NYU),2013,Vision,,5.32e+17,19215861678.004536,United States of America,,383.78,0.0076904059913655,0.0029514240113662
+DistBelief NNLM,Google,2013,Language,,2.612736e+18,19215861678.004536,United States of America,,383.78,0.0377687980982264,0.0144949093341373
+DNN EM segmentation,"IDSIA,SUPSI",2012,Vision,218896.0,4.78e+17,16194562647.754135,Switzerland,,,0.0081989109965986,
+AlexNet,University of Toronto,2012,Vision,60000000.0,4.7e+17,16194562647.754135,Canada,,,0.0080616907288731,
+Unsupervised High-level Feature Learner,Google,2012,Vision,1000000000.0,6e+17,16194562647.754135,United States of America,,383.78,0.0102915200794125,0.0039496795760769
+Dropout (ImageNet),University of Toronto,2012,Vision,,2.731968e+17,16194562647.754135,Canada,,,0.0046860172547187,
+CNN Committee (MNIST),IDSIA,2011,Vision,120620.0,5.2e+16,4319327731.092437,Switzerland,,,0.0033441418071768,
+Deep Autoencoders,University of Toronto,2011,Vision,139808256.0,3.672864e+16,4319327731.092437,Canada,,,0.0023620342412451,
+KN5 LM + RNN 400/10 (WSJ),"Brno University of Technology,Johns Hopkins University",2010,Speech,22160000.0,1.7e+16,6479508196.721312,Czechia,,,0.0007287933094384,
+RNN LM,Johns Hopkins University,2010,Language,70265000.0,5.396e+16,6479508196.721312,United States of America,,383.78,0.002313275704547,0.000887788949891
+RNN 1000/5 + RT09 LM (NIST RT05),"Brno University of Technology,Johns Hopkins University",2010,Speech,77039000.0,5e+16,6479508196.721312,Czechia,,,0.0021435097336425,
+LCNP LabelMe,University of Bonn,2009,Vision,13729792.0,3295150080000000.0,,Germany,,,,
+LCNP MNIST,,2009,Vision,11616256.0,4181852160000000.0,,,,,,
+SB-LM,Google,2007,Language,300000000000.0,1.4494464e+18,,United States of America,,383.78,,
+KN-LM,Google,2007,Language,21000000000.0,7.7303808e+17,,United States of America,,383.78,,
+SVM-CNN,New York University (NYU),2006,Vision,90857.0,745200000000000.0,,United States of America,,383.78,,
+Hierarchical LM,,2005,Language,,115848000000000.0,,,,,,
+LMICA,,2004,Vision,4096000.0,2782080000000000.0,,,,,,
+NPLM (Brown),University of Montreal / Université de Montréal,2003,Language,4124233.0,132076260000000.0,,Canada,,,,
+NPLM (AP News),University of Montreal / Université de Montréal,2003,Language,11904264.0,1666869200000000.0,,Canada,,,,
+Decision tree (classification),"Mitsubishi Electric Research Labs,Compaq CRL",2001,Vision,12000.0,63000000000000.0,,United States of America,,383.78,,
+PoE MNIST,University College London (UCL),2000,Vision,3925310.0,51810000000000.0,,United Kingdom,,267.1,,
+Neural LM,University of Montreal / Université de Montréal,2000,Language,6906980.0,6339000000000000.0,,Canada,,,,
+RECONTRA-categorized,,1999,Language,66780.0,8013600000000.0,,,,,,
+LeNet-5,AT&T,1998,Vision,60000.0,2810937600000.0,,United States of America,,383.78,,
+LSTM,Technical University of Munich,1997,Language,10504.0,31512000000000.0,,Germany,,,,
+MUSIC perceptron,,1996,Vision,13607.0,881733600000.0,,,,,,
+Predictive Coding NN,Technical University of Munich,1994,Language,206910.0,18621900000000.0,,Germany,,,,
+NeuroChess,,1994,Games,72251.0,858730812676.0,,,,,,
+Siamese-TDNN,Bell Laboratories,1993,Vision,744.0,12869570138112.0,,United States of America,,383.78,,
+TD-Gammon,IBM,1992,Games,25000.0,18232157622832.703,,United States of America,,383.78,,
+Weight Decay,,1991,Speech,8386.0,75474000000.0,,,,,,
+SexNet compression,,1990,Vision,72940.0,78775200000.0,,,,,,
+NETtalk reimplementation,Oregon State University,1990,Speech,27480.0,35811936000.0,,United States of America,,383.78,,
+Zip CNN,"AT&T,Bell Laboratories",1989,Vision,9760.0,1496338054440.0,,United States of America,,383.78,,
+Handwritten digit recognition network,AT&T,1989,Vision,2578.0,181440000000.0,,United States of America,,383.78,,
+Invariant image recognition,Complutense University of Madrid,1989,Vision,,27000000000.0,,Spain,,,,
+Translation-invariant MLP,Carnegie Mellon University (CMU),1987,,816.0,18032947200.0,,United States of America,,383.78,,
+NetTalk (transcription),Princeton University,1987,Speech,18629.0,28328002560.0,,United States of America,,383.78,,
+NetTalk (dictionary),Princeton University,1987,Speech,18629.0,27664065000.0,,United States of America,,383.78,,
+MLP with back-propagation,"University of California San Diego,Carnegie Mellon University (CMU)",1986,Mathematics,720.0,673920000.0,,United States of America,,383.78,,
+Distributed representation NN,Carnegie Mellon University (CMU),1986,Other,432.0,388800000.0,,United States of America,,383.78,,
+ASE+ACE,University of Massachusetts Amherst,1983,Robotics,324.0,324000000.0,,United States of America,,383.78,,
+Neocognitron,NHK Broadcasting Science Research Laboratories,1980,Vision,1140576.0,273738240.0,,Japan,,,,
+LTE speaker verification system,IBM,1966,Speech,2061.0,105917060.0,,United States of America,,383.78,,
+Print Recognition Logic,IBM,1963,Vision,,22500000.0,,United States of America,,383.78,,
+Linear Decision Functions,Bell Laboratories,1962,Mathematics,,1559250.0,,United States of America,,383.78,,
+ADALINE,Stanford University,1960,Vision,17.0,6600.0,,United States of America,,383.78,,
+Perceptron (1960),Cornell Aeronautical Laboratory,1960,Vision,1000.0,720000000.0,,United States of America,,383.78,,
+Samuel Neural Checkers,IBM,1959,Games,16.0,428400000.0,,United States of America,,383.78,,
+Pandemonium (morse),Massachusetts Institute of Technology (MIT),1959,Language,,600000000.0,,United States of America,,383.78,,
+Perceptron Mark I,"Cornell Aeronautical Laboratory,Cornell University",1957,Other,1000.0,694894.9377361819,,United States of America,,383.78,,
+Theseus,Bell Laboratories,1950,Robotics,40.0,40.0,,United States of America,,383.78,,

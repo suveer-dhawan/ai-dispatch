@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The A.I. Dispatch</title>
+
+  <!-- Fonts: editorial serif + clean sans for labels -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- D3 v7 (core) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+  <!-- TopoJSON for the globe -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
+  <!-- FIX #16 — Scrollama bundled locally instead of unpkg CDN -->
+  <script src="lib/scrollama.min.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== PINNED MASTHEAD ===== -->
+  <header id="masthead">
+    <div class="masthead-inner">
+      <div class="masthead-rule-top"></div>
+      <h1 class="masthead-title">The A.I. Dispatch</h1>
+      <div class="masthead-subtitle">
+        <span>The Physical Footprint of Artificial Intelligence</span>
+        <!-- FIX #12 — Chapter progress indicator, updated by main.js on scroll -->
+        <span id="chapter-progress" class="masthead-progress"></span>
+        <span class="masthead-date">Data: 2015–2025 · Epoch AI &amp; Ember</span>
+      </div>
+      <div class="masthead-rule-bottom"></div>
+    </div>
+  </header>
+
+  <!-- ===== OPENING HOOK ===== -->
+  <section id="hook">
+    <div class="hook-content">
+      <p class="hook-kicker">An Investigation</p>
+      <h2 class="hook-headline">What does one prompt <em>really</em> cost?</h2>
+      <div class="hook-cursor" aria-hidden="true">|</div>
+      <!-- FIX #10 — Live ticking energy counter (animated by main.js) -->
+      <p class="hook-counter">Estimated cumulative AI training energy:
+        <span id="energy-counter" class="energy-counter-value">— MWh</span>
+      </p>
+      <p class="hook-scroll-cue">Scroll to begin ↓</p>
+      <p class="hook-how-to">Scroll to advance · drag to explore · hover for detail</p>
+    </div>
+  </section>
+
+ <!-- ===== CHAPTER 1 — THE RACE ===== -->
+  <section class="chapter" id="chapter-1">
+    <div class="chapter-header">
+      <span class="chapter-kicker">Chapter One</span>
+      <h2 class="chapter-title">The Race</h2>
+      <p class="chapter-dek">Compute demand is outrunning the machines built to power it.</p>
+    </div>
+
+    <div class="scrolly" id="scrolly-race">
+      <!-- Left: narration steps. Right: sticky visual. -->
+      <div class="scrolly-text">
+        <div class="step" data-step="race-1">
+          <p><span class="drop-cap">F</span>or decades, the semiconductor industry kept a quiet promise: each new generation of chip would do more work for less energy. Between 2015 and 2019, that promise held. Average training compute for frontier AI models rose from roughly 10<sup>20</sup> FLOPs to 10<sup>22</sup> — a hundredfold increase — while hardware efficiency tracked a comparable upward slope. Engineers at NVIDIA, Google, and AMD were building faster silicon just quickly enough to match what AI labs demanded of it.</p>
+        </div>
+        <div class="step" data-step="race-2">
+          <p>Then the compact broke. After 2020, compute demand began multiplying at 5–9× per year, driven by an industry-wide conviction that scale itself was the path to intelligence. Hardware efficiency, constrained by the physics of transistor fabrication, managed only 1–2× annual gains. The gap compounds: a single year of mismatch is recoverable; five consecutive years is a structural deficit. By the time GPT-4 shipped in 2023, the energy required to train a frontier model had grown by three orders of magnitude in just four years — while the chips running those jobs had barely doubled in efficiency.</p>
+        </div>
+        <div class="step" data-step="race-3">
+          <p>The 2025 generation made the crisis impossible to ignore. xAI's <strong>Grok 4</strong> consumed an estimated 5.0 × 10<sup>26</sup> FLOPs during training. OpenAI's <strong>GPT-4.5</strong> followed close behind at 3.8 × 10<sup>26</sup>. These are not incremental steps — they represent a full order-of-magnitude leap beyond anything attempted just twelve months earlier. Hardware cannot save us from this curve. The machines are losing the race.</p>
+        </div>
+      </div>
+      <div class="scrolly-graphic">
+        <div class="graphic-container" id="race-chart">
+          <!-- D3 renders the dual-line chart here -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CHAPTER 2 — THE MAP ===== -->
+  <section class="chapter" id="chapter-2">
+    <div class="chapter-header">
+      <span class="chapter-kicker">Chapter Two</span>
+      <h2 class="chapter-title">The Map</h2>
+      <p class="chapter-dek">Geography decides the true carbon cost of intelligence.</p>
+    </div>
+
+    <div class="scrolly scrolly-flipped" id="scrolly-map">
+      <div class="scrolly-graphic">
+        <div class="graphic-container" id="globe-chart">
+          <!-- D3 renders the globe here -->
+        </div>
+        <div id="what-if-box" class="what-if-box">
+          <div class="what-if-header">What If?</div>
+          <div class="what-if-body">
+            <label for="model-select">Pick a model</label>
+            <select id="model-select"></select>
+            <label for="country-select">"Train it in…"</label>
+            <select id="country-select"></select>
+            <div id="what-if-result" class="what-if-result"></div>
+          </div>
+        </div>
+      </div>
+      <div class="scrolly-text">
+        <div class="step" data-step="map-1">
+          <p><span class="drop-cap">N</span>ot all electricity is created equal. Every kilowatt-hour drawn from a national grid carries a carbon signature — shaped by that country's mix of coal, gas, nuclear, and renewables. When an AI model trains for weeks across thousands of GPUs, it inherits the carbon intensity of wherever those GPUs are plugged in. The United States, home to OpenAI, Google DeepMind, Meta, and xAI, dominates the globe: over 33,000 estimated tonnes of CO₂ from AI training alone. Yet America's grid averages roughly 407 gCO₂/kWh across the dataset — middling by global standards, neither clean nor catastrophic. Drag the globe to explore.</p>
+        </div>
+        <div class="step" data-step="map-2">
+          <p>The danger is emerging elsewhere. The United Arab Emirates — home to the Falcon-180B model — operates on a grid averaging 484 gCO₂/kWh, almost entirely gas-fired. China, training the ERNIE and Wu Dao series, relies on a grid at 596 gCO₂/kWh, heavily dependent on coal. These are not hypothetical risks. As Middle Eastern sovereign wealth funds and Chinese tech giants pour billions into frontier AI, every model trained in these regions carries a <strong>carbon multiplier</strong> — the same computation, the same intelligence, but with dramatically higher emissions baked into every floating-point operation.</p>
+        </div>
+        <div class="step" data-step="map-3">
+          <!-- Updated India figure from 708 to 632 to match Ember 2024 data used in the what-if calculator -->
+          <p>How much does geography really matter? Use the calculator to find out. Select any model from the dataset, then pick a hypothetical training location. The carbon footprint recalculates instantly. Train Grok 4 in <strong>France</strong> — where nuclear power keeps the grid at just 56 gCO₂/kWh — and its emissions plummet by over 85%. Train the same model in <strong>India</strong>, where coal pushes the grid to 632 gCO₂/kWh, and emissions jump by over 50%. Or try <strong>Sweden</strong>, where hydro and nuclear deliver a grid at just 7 gCO₂/kWh — a 98% reduction. The physics of the model doesn't change. Only the politics of the grid.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CHAPTER 3 — THE SHIFT ===== -->
+  <section class="chapter" id="chapter-3">
+    <div class="chapter-header">
+      <span class="chapter-kicker">Chapter Three</span>
+      <h2 class="chapter-title">The Shift</h2>
+      <p class="chapter-dek">Multimodal AI rewrites the energy baseline.</p>
+    </div>
+
+    <div class="scrolly" id="scrolly-shift">
+      <div class="scrolly-text">
+        <div class="step" data-step="shift-1">
+          <p><span class="drop-cap">A</span> universal law governs the relationship between a model's size and the energy it consumes. A power-law regression across 57 frontier models yields an R² of 0.768 — meaning roughly 77% of the variance in training energy is explained by parameter count alone. The takeaway is blunt: bigger models mathematically guarantee exponentially higher energy bills, regardless of how cleverly they are optimised. No amount of engineering elegance changes the underlying physics.</p>
+        </div>
+        <div class="step" data-step="shift-2">
+          <p>But scale is only half the story. The real rupture is architectural. When the industry shifted from single-domain Language models to <strong>Multimodal</strong> systems — models that simultaneously process text, images, audio, and video — the energy baseline didn't simply increase. It <em>jumped regimes</em>. The median Multimodal model requires over 100x the energy of a median Language model. The horizontal lines on this chart mark those medians. Notice how far apart they sit.</p>
+        </div>
+        <div class="step" data-step="shift-3">
+          <p>Perhaps the starkest way to see it: the <em>least</em> energy-hungry Multimodal model in the dataset (352 MWh) consumes substantially more than the 75th percentile of all Language models. Every orange dot above sits in a region that blue dots almost never reach. This is not incremental growth — it is a new regime of infrastructure demand, routinely requiring tens of thousands of Megawatt-hours per training run. Hover on any dot to see the model behind the number.</p>
+        </div>
+      </div>
+      <div class="scrolly-graphic">
+        <div class="graphic-container" id="beeswarm-chart">
+          <!-- D3 renders the beeswarm here -->
+        </div>
+        <div id="by-the-numbers" class="inset-box">
+          <div class="inset-header">By The Numbers</div>
+          <div class="inset-body" id="house-equiv"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COLOPHON ===== -->
+  <footer id="colophon">
+    <div class="colophon-inner">
+      <div class="colophon-section">
+        <h3>How to Read This Paper</h3>
+        <p>Scroll down to advance the narrative. Visualisations animate as you read. In Chapter 2, drag the globe to explore and use the "What If?" box to test carbon scenarios yourself. Hover on data points throughout for detail.</p>
+      </div>
+      <div class="colophon-section">
+        <h3>Data Sources</h3>
+        <p><a href="https://epoch.ai/data/ai_models.zip" target="_blank" rel="noopener">Epoch AI — Frontier Model Dataset</a> · <a href="https://files.ember-energy.org/public-downloads/yearly_full_release_long_format.csv" target="_blank" rel="noopener">Ember — Global Electricity Review</a></p>
+      </div>
+      <div class="colophon-section">
+        <p class="colophon-credit">FIT5147 Data Visualisation Project · Suveer Dhawan · 35031387</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
